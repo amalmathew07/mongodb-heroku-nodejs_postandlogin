@@ -4,6 +4,7 @@ var mongoose = require('./mongooseplug');
 var bodyparser = require('body-parser');
 var player = require('./models/user').player;
 var loginUser = require('./models/logindet').loginUser;
+var port = process.env.PORT || 3000;
 
 var app = express();
 app.use(bodyparser.json());
@@ -72,7 +73,7 @@ app.get('/getplayer/:id',(req,res) => {
     })
 })
 
-app.listen(3000,() => {
+app.listen(port,() => {
 
 })
 
